@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale =1">
+<title>Maggie's App</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav">
+                <li><a class="nav-link" href="/Product/index.html">Home</a></li>
+                <li><a class="nav-link" href="/Product/about-page.html">About</a></li>
+            </ul>
+          </div>
+          <div class="btn-group" role="group">
+            <button id="blogPosts" type="button" class="blogPost dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Blog Posts
+            </button>
+          <div class="dropdown-menu" aria-labelledby="Blog Posts">
+            <a class="dropdown-item" href="/Product/Blog Entries.html">Introduction</a>
+            <a class="dropdown-item" href="/Product/Self-care blog.html">Self-Care</a>
+            <a class="dropdown-item" href="/Product/Study Abroad.html">Study Abroad</a>
+          </div>
+        </div>
+        </div>
+      </nav>
+
+    <div class="container">
+        <p><strong>Disclaimer:</strong>
+            This product does not belong to me and I am not affiliated 
+            with the selfcareisforeveryone.com website. I am using the sweatshirt product
+            as an example to showcase what I have learned.
+        </p>
+
+        <div id="app">
+            <div class="cart">
+                <p>Cart({{ cart.length }})</p>
+            </div>
+    
+            <product :premium="premium" @add-to-cart="updateCart" @remove-from-cart="removeItem"></product>
+            <!-- <product></product> create another product!!-->
+        </div>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="main.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>  
+
+</body>
+</html>
+
+
